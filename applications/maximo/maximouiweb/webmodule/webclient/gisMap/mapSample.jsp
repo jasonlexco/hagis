@@ -48,12 +48,12 @@
         <div id="map" class="map"></div>
         <script>
             // Default values for coordinates
-            var defaultX = '114.20847'; // Replace with your default X value
-            var defaultY = '22.29227'; // Replace with your default Y value
+            var defaultE = '114.17796'; // Replace with your default X value
+            var defaultN = '22.31434'; // Replace with your default Y value
             
             // Get parameters x and y from the URL
-            var e = '<%= request.getParameter("e") != null ? request.getParameter("e") : defaultX %>';
-            var n = '<%= request.getParameter("n") != null ? request.getParameter("n") : defaultY %>';
+            var e = '<%= request.getParameter("e") != null ? request.getParameter("e") : "' + defaultE + '" %>';
+            var n = '<%= request.getParameter("n") != null ? request.getParameter("n") : "' + defaultN + '" %>';
             // Example WKT point using x and y parameters
             var wkt = 'POINT (' + e + ' ' + n + ')';
             var format = new ol.format.WKT();
