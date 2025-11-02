@@ -49,13 +49,13 @@
         <script>
 		
         // Get parameters x and y from the URL using JSP
-        var x = '<%= request.getParameter("x") != null ? request.getParameter("x") : "defaultX" %>';
-        var y = '<%= request.getParameter("y") != null ? request.getParameter("y") : "defaultY" %>';
-		//console.log("x: ", x);
-		//console.log("y: ", y);
+        var e = '<%= request.getParameter("x") != null ? request.getParameter("e") : "defaultX" %>';
+        var n = '<%= request.getParameter("y") != null ? request.getParameter("n") : "defaultY" %>';
+		//console.log("N: ", n);
+		//console.log("E: ", e);
         // Example WKT point using x and y parameters
-        //var wkt = 'POINT (' + x + ' ' + y + ')';
-		var wkt = 'POINT (' + x + ' ' + y + ')';
+        //var wkt = 'POINT (' + e + ' ' + n+ ')';
+		var wkt = 'POINT (' + e + ' ' + n + ')';
         //console.log("WKT Point: ", wkt);
 			var format = new ol.format.WKT();
 			var feature = format.readFeature(wkt, {
